@@ -1,6 +1,9 @@
 package org.example;
 
 import org.example.bean.SpringBean;
+import org.example.bean.TestBean1;
+import org.example.bean.TestBean2;
+import org.example.bean.TestBean3;
 import org.example.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -18,6 +21,14 @@ public class AppInitializer {
         bean2.testBean();
         System.out.println(bean2);
 
+        TestBean1 testBean1 = context.getBean(TestBean1.class);
+        System.out.println(testBean1);
+
+        TestBean2 testBean2 = context.getBean(TestBean2.class);
+        System.out.println(testBean2);
+
         context.close();
+//        TestBean3 testBean3 = context.getBean(TestBean3.class);
+//        System.out.println(testBean3);
     }
 }
