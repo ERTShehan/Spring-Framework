@@ -44,7 +44,10 @@ public class AppInitializer {
         System.out.println(byBeanId);
 
         //request bean from bean id and class name
-        TestBean2 testBean2 = context.getBean("testBean2", TestBean2.class);
+//        TestBean2 testBean2 = context.getBean("testBean2", TestBean2.class);
+//        System.out.println(testBean2);
+
+        TestBean2 testBean2 = context.getBean("Shehan", TestBean2.class);
         System.out.println(testBean2);
 
         context.registerShutdownHook();
