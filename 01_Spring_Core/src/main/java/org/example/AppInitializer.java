@@ -1,9 +1,7 @@
 package org.example;
 
-import org.example.bean.SpringBean;
-import org.example.bean.TestBean1;
+import org.example.test.TestBean1;
 import org.example.bean.TestBean2;
-import org.example.bean.TestBean3;
 import org.example.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -47,8 +45,8 @@ public class AppInitializer {
 //        TestBean2 testBean2 = context.getBean("testBean2", TestBean2.class);
 //        System.out.println(testBean2);
 
-        TestBean2 testBean2 = context.getBean("Shehan", TestBean2.class);
-        System.out.println(testBean2);
+//        TestBean2 testBean2 = context.getBean("Shehan", TestBean2.class);
+//        System.out.println(testBean2);
 
         context.registerShutdownHook();
     }
