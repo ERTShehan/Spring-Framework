@@ -24,16 +24,18 @@ public class AppInitializer {
         TestBean1 testBean1 = context.getBean(TestBean1.class);
         System.out.println(testBean1);
 
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("JVM is about to shutdown"); //JVM aka shutdown wena welawe context aka close kirima
-            context.close();
-        }));
-
         TestBean2 testBean2 = context.getBean(TestBean2.class);
         System.out.println(testBean2);
 
 //        context.close();
         TestBean3 testBean3 = context.getBean(TestBean3.class);
         System.out.println(testBean3);
+
+//        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+//            System.out.println("JVM is about to shutdown"); //JVM aka shutdown wena welawe context aka close kirima
+//            context.close();
+//        }));
+
+        context.registerShutdownHook();
     }
 }
