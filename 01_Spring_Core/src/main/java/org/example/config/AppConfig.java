@@ -16,7 +16,7 @@ public class AppConfig {
 //        return new MyConnection();
 //    }
 
-    @Bean
+    @Bean("san")
     MyConnection getConnection() {
         return new MyConnection();
     }

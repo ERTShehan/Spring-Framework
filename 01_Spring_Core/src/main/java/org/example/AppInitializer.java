@@ -49,7 +49,7 @@ public class AppInitializer {
 //        TestBean2 testBean2 = context.getBean("Shehan", TestBean2.class);
 //        System.out.println(testBean2);
 
-        MyConnection connection = (MyConnection) context.getBean("getConnection");
+        MyConnection connection = (MyConnection) context.getBean("san");
         System.out.println(connection);
 
         context.registerShutdownHook();
