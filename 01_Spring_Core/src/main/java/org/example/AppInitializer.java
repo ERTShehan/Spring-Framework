@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.bean.MyConnection;
 import org.example.test.TestBean1;
 import org.example.bean.TestBean2;
 import org.example.config.AppConfig;
@@ -34,12 +35,12 @@ public class AppInitializer {
 //            context.close();
 //        }));
 
-        TestBean1 testBean1 = context.getBean(TestBean1.class);
-        System.out.println(testBean1);
+//        TestBean1 testBean1 = context.getBean(TestBean1.class);
+//        System.out.println(testBean1);
 
         //request bean from bean id
-        TestBean1 byBeanId = (TestBean1) context.getBean("testBean1"); //first letter aka animware simple wenna ona
-        System.out.println(byBeanId);
+//        TestBean1 byBeanId = (TestBean1) context.getBean("testBean1"); //first letter aka animware simple wenna ona
+//        System.out.println(byBeanId);
 
         //request bean from bean id and class name
 //        TestBean2 testBean2 = context.getBean("testBean2", TestBean2.class);
@@ -47,6 +48,9 @@ public class AppInitializer {
 
 //        TestBean2 testBean2 = context.getBean("Shehan", TestBean2.class);
 //        System.out.println(testBean2);
+
+        MyConnection connection = (MyConnection) context.getBean("getConnection");
+        System.out.println(connection);
 
         context.registerShutdownHook();
     }

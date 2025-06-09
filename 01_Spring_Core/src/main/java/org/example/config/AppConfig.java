@@ -7,12 +7,17 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-//@ComponentScan(basePackages = "org.example.bean")
+@ComponentScan(basePackages = "org.example.bean")
 //@ComponentScan(basePackageClasses = SpringBean.class)
-@ComponentScan(basePackageClasses = TestBean1.class)
+//@ComponentScan(basePackageClasses = TestBean1.class)
 public class AppConfig {
-    @Bean //pitin ganan class akak akak bean akak karanna use karai
-    MyConnection myConnection() {
+//    @Bean //pitin ganan class akak akak bean akak karanna use karai
+//    MyConnection myConnection() {
+//        return new MyConnection();
+//    }
+
+    @Bean
+    MyConnection getConnection() {
         return new MyConnection();
     }
 }
