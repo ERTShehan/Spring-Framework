@@ -17,10 +17,22 @@ public class Test2 {
 //    }
 
     //constructor through injection
+//    DI test1;
+//
+//    @Autowired
+//    public Test2(DI test1) {
+//        this.test1 = test1;
+//    }
+//
+//    public void calledHelloMethod() {
+//        test1.sayHello();
+//    }
+
+    //setter method through injection
     DI test1;
 
     @Autowired
-    public Test2(DI test1) {
+    public void setterMethod(DI test1) {
         this.test1 = test1;
     }
 
