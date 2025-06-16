@@ -26,6 +26,7 @@ public class AppInitializer {
         MyConnection myConnection1 = context.getBean(MyConnection.class);
         MyConnection myConnection2 = context.getBean(MyConnection.class);
 
+
         context.registerShutdownHook();
     }
 }
