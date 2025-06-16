@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Scope;
 @ComponentScan(basePackages = "lk.ijse.edu.bean")
 public class AppConfig {
     @Bean
-//    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+//    @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) // Default scope is singleton
     MyConnection getConnection() {
         System.out.println("Creating MyConnection bean");
         return new MyConnection();
