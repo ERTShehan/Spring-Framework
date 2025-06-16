@@ -1,6 +1,7 @@
 package lk.ijse.edu.bean;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -37,6 +38,7 @@ public class Boy {
 //        boy.girl.chat();
 //    }
     @Autowired
+            @Qualifier("girl2") // Use @Qualifier to specify which implementation to inject when multiple candidates are available
     Agreement girl;
 
     public Boy() {
