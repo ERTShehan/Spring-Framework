@@ -37,7 +37,7 @@ public class Boy {
 //        boy.girl.chat();
 //    }
     @Autowired
-    Girl girl;
+    Agreement girl;
 
     public Boy() {
         System.out.println("Boy Constructor");
