@@ -1,5 +1,9 @@
 package lk.ijse.edu.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Boy {
     //Property injection
 //    Girl girl = new Girl();
@@ -21,15 +25,25 @@ public class Boy {
 //    }
 
     //Setter method through dependency injection
+//    Girl girl;
+//
+//    public void setterMethod(Girl girl) {
+//        this.girl = girl;
+//    }
+//
+//    public void chatWithGirl() {
+//        Boy boy = new Boy();
+//        boy.setterMethod(new Girl());
+//        boy.girl.chat();
+//    }
+    @Autowired
     Girl girl;
 
-    public void setterMethod(Girl girl) {
-        this.girl = girl;
+    public Boy() {
+        System.out.println("Boy Constructor");
     }
 
     public void chatWithGirl() {
-        Boy boy = new Boy();
-        boy.setterMethod(new Girl());
-        boy.girl.chat();
+        girl.chat();
     }
 }
