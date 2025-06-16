@@ -38,7 +38,7 @@ public class Boy {
 //        boy.girl.chat();
 //    }
     @Autowired
-            @Qualifier("girl2") // Use @Qualifier to specify which implementation to inject when multiple candidates are available
+    @Qualifier("girl2") // Use @Qualifier to specify which implementation to inject when multiple candidates are available
     Agreement girl;
 
     public Boy() {
