@@ -5,11 +5,23 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Test2 {
-    @Autowired
+//    @Autowired
+//    DI test1;
+//
+//    public Test2() {
+//        System.out.println("Test2 Constructor");
+//    }
+//
+//    public void calledHelloMethod() {
+//        test1.sayHello();
+//    }
+
+    //constructor through injection
     DI test1;
 
-    public Test2() {
-        System.out.println("Test2 Constructor");
+    @Autowired
+    public Test2(DI test1) {
+        this.test1 = test1;
     }
 
     public void calledHelloMethod() {
