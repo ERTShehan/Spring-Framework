@@ -8,10 +8,10 @@ import org.springframework.context.annotation.*;
 @Import({AppConfig1.class, AppConfig2.class})
 
 //config -> root
-@ImportResource("classpath:hibernate.cfg.xml")
+//@ImportResource("classpath:hibernate.cfg.xml")
 
 //if not in the root
-@ImportResource("file:absolute-path-of-hibernate.cfg.xml")
+//@ImportResource("file:absolute-path-of-hibernate.cfg.xml")
 public class AppConfig {
     @Bean
     public SpringBean springBean() {
