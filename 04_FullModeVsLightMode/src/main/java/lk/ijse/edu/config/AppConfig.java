@@ -11,6 +11,10 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
     @Bean
     public SpringBeanOne springBeanOne() {
+        SpringBeanTwo springBeanTwo1 = springBeanTwo();
+        SpringBeanTwo springBeanTwo2 = springBeanTwo();
+        System.out.println(springBeanTwo1);
+        System.out.println(springBeanTwo2);
         return new SpringBeanOne();
     }
 
