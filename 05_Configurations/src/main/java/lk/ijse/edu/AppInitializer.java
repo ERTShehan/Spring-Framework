@@ -10,7 +10,6 @@ public class AppInitializer {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.register(AppConfig1.class);
-        context.register(AppConfig2.class);
         context.refresh();
 
         //Configuration class 1
