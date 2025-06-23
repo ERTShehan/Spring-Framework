@@ -9,18 +9,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackages = "lk.ijse.edu.bean")
 public class AppConfig {
-    @Bean
-    public SpringBeanOne springBeanOne() {
-        //interBean dependency
-        SpringBeanTwo springBeanTwo1 = springBeanTwo();
-        SpringBeanTwo springBeanTwo2 = springBeanTwo();
-        System.out.println(springBeanTwo1);
-        System.out.println(springBeanTwo2);
-        return new SpringBeanOne();
-    }
 
-    @Bean
-    public SpringBeanTwo springBeanTwo() {
-        return new SpringBeanTwo();
-    }
 }
