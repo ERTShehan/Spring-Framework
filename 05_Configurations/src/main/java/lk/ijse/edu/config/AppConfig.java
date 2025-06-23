@@ -1,14 +1,17 @@
 package lk.ijse.edu.config;
 
 import lk.ijse.edu.bean.SpringBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
 
 @Configuration
-@Import({AppConfig1.class, AppConfig2.class})
 @ComponentScan(basePackages = "lk.ijse.edu.bean")
+@Import({AppConfig1.class, AppConfig2.class})
+
+//config -> root
+@ImportResource("classpath:hibernate.cfg.xml")
+
+//if not in the root
+@ImportResource("file:absolute-path-of-hibernate.cfg.xml")
 public class AppConfig {
     @Bean
     public SpringBean springBean() {
