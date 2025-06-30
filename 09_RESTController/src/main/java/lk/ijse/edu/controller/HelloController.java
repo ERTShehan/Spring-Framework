@@ -14,6 +14,11 @@ public class HelloController {
         return "Hello world!";
     }
 
+//    @GetMapping()
+//    public String sayHello2() {
+//        return "Hello world2!";
+//    }
+
     @PostMapping
     public String sayHelloPost() {
         return "Say Post";
