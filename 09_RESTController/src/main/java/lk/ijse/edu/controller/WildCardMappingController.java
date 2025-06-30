@@ -14,6 +14,11 @@ public class WildCardMappingController {
         return "Hello from WildCardMappingController!";
     }
 
+//    @GetMapping("hello/**/ijse")
+//    public String sayHelloPost() {
+//        return "Hello from WildCardMappingController - Three!";
+//    }
+
     @GetMapping("hello/*/*")
     public String sayHelloGet() {
         return "Hello from WildCardMappingController - Two!";
