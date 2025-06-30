@@ -9,11 +9,13 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 
     @Override
     protected Class<?> @Nullable [] getRootConfigClasses() {
+        //business logics (Parent context)
         return new Class<?>[] {WebRootConfig.class};
     }
 
     @Override
     protected Class<?> @Nullable [] getServletConfigClasses() {
+        //request mapping, controllers, view resolvers, etc. (Child context)
         return new Class<?> []{WebAppConfig.class};
     }
 
