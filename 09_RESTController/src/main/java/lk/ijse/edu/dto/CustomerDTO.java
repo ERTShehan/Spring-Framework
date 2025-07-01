@@ -1,8 +1,13 @@
 package lk.ijse.edu.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class CustomerDTO {
+    @JsonProperty("CID")
     private String CID;
+    @JsonProperty("CName")
     private String CName;
+    @JsonProperty("CAddress")
     private String CAddress;
 
     public CustomerDTO() {
