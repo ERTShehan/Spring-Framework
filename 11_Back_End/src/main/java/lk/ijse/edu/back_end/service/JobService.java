@@ -8,4 +8,7 @@ public interface JobService {
     void saveJob(JobDTO jobDTO);
     void updateJob(JobDTO jobDTO);
     void deleteJob(int id);
-    List<JobDTO> getAllJobs();}
+    List<JobDTO> getAllJobs();
+    void changeJobStatus(String jobId);
+    List<JobDTO> getAllJobsByKeyword(String keyword);
+}

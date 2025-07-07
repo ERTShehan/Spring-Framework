@@ -35,4 +35,16 @@ public class JobController {
     public List<JobDTO> getAllJobs(){
         return jobService.getAllJobs();
     }
+
+    @PatchMapping("status/{id}")
+    private String changeJobStatus(@PathVariable("id") String jobId){
+        System.out.println("Job Id: "+jobId);
+        jobService.changeJobStatus(jobId);
+        return "Job Status Changed";
+    }
+
+    @GetMapping("search/{keyword}")
+    public List<JobDTO> searchJob(@PathVariable("keyword") String keyword){
+        return jobService.getAllJobsByKeyword(keyword);
+    }
 }
