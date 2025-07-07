@@ -3,7 +3,6 @@ package lk.ijse.edu.back_end.controller;
 import lk.ijse.edu.back_end.dto.JobDTO;
 import lk.ijse.edu.back_end.service.JobService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
