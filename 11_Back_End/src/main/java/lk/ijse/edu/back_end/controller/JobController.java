@@ -5,6 +5,8 @@ import lk.ijse.edu.back_end.service.impl.JobServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/v1/job")
 @RequiredArgsConstructor
@@ -12,8 +14,25 @@ public class JobController {
     private final JobServiceImpl jobService;
 
     @PostMapping("create")
-    public String creatJob(@RequestBody JobDTO jobDTO) {
+    public String createJob(@RequestBody JobDTO jobDTO) {
         jobService.saveJob(jobDTO);
         return "Job Created";
+    }
+
+    @PutMapping("update")
+    public String updateJob(@RequestBody JobDTO jobDTO) {
+        jobService.updateJob(jobDTO);
+        return "Job Updated";
+    }
+
+    @PutMapping("delete")
+    public String deleteJob(@RequestParam int id) {
+        jobService.deleteJob(id);
+        return "Job Deleted";
+    }
+
+    @GetMapping("getalljobs")
+    public List<JobDTO> getAllJobs(){
+        return jobService.getAllJobs();
     }
 }

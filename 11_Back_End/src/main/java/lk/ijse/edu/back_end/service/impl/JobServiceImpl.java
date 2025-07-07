@@ -6,7 +6,10 @@ import lk.ijse.edu.back_end.repository.JobRepository;
 import lk.ijse.edu.back_end.service.JobService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -24,5 +27,21 @@ public class JobServiceImpl implements JobService {
 //        jobRepository.save(job);
 
         jobRepository.save(modelMapper.map(jobDTO, Job.class));
+    }
+
+
+    @Override
+    public void updateJob(JobDTO jobDTO) {
+        jobRepository.save(modelMapper.map(jobDTO, Job.class));
+    }
+
+    public void deleteJob(int id) {
+        jobRepository.deleteById(id);
+    }
+
+    @Override
+    public List<JobDTO> getAllJobs() {
+        List<Job> allJobs=jobRepository.findAll();
+        return modelMapper.map(allJobs, new TypeToken<List<JobDTO>>(){}.getType());
     }
 }
