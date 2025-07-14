@@ -2,7 +2,9 @@ package lk.ijse.edu.back_end.controller;
 
 import lk.ijse.edu.back_end.dto.JobDTO;
 import lk.ijse.edu.back_end.service.impl.JobServiceImpl;
+import lk.ijse.edu.back_end.util.APIResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -50,7 +52,12 @@ public class JobController {
     }
 
     @GetMapping("getalljobs")
-    public List<JobDTO> getAllJobs(){
-        return jobService.getAllJobs();
+    public ResponseEntity<APIResponse<List<JobDTO>>> getAllJobs(){
+        List<JobDTO> jobDTOS =  jobService.getAllJobs();
+        return ResponseEntity.ok(new APIResponse<>(
+           200,
+           "",
+           jobDTOS
+        ));
     }
 }
