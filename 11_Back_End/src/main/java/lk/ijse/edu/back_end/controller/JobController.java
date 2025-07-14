@@ -14,20 +14,37 @@ import java.util.List;
 public class JobController {
     private final JobServiceImpl jobService;
 
-    @PostMapping("create")
+    @PostMapping("/create")
     public String createJob(@RequestBody JobDTO jobDTO) {
         jobService.saveJob(jobDTO);
-        return "Job Created";
+        return "Job Added";
+    }
+
+    @GetMapping("/getjob/{id}")
+    public JobDTO getJob(@PathVariable("id") String id) {
+        return jobService.getJobById(id);
     }
 
     @PutMapping("update")
     public String updateJob(@RequestBody JobDTO jobDTO) {
         jobService.updateJob(jobDTO);
         return "Job Updated";
+
     }
 
-    @PutMapping("delete")
-    public String deleteJob(@RequestParam int id) {
+    @PatchMapping("/changeStatus/{id}")
+    public String changeJobStatus(@PathVariable("id") String id) {
+        jobService.changeJobStatus(id);
+        return "Job Status Changed";
+    }
+
+    @GetMapping("search/{keyword}")
+    public List<JobDTO> searchJob(@PathVariable("keyword") String keyword) {
+        return jobService.getAllJobsByKeyword(keyword);
+    }
+
+    @PutMapping(value = "delete" , params = "id")
+    public String deleteJob(@RequestParam("id") String id) {
         jobService.deleteJob(id);
         return "Job Deleted";
     }
@@ -35,17 +52,5 @@ public class JobController {
     @GetMapping("getalljobs")
     public List<JobDTO> getAllJobs(){
         return jobService.getAllJobs();
-    }
-
-    @PatchMapping("status/{id}")
-    private String changeJobStatus(@PathVariable("id") String jobId){
-        System.out.println("Job Id: "+jobId);
-        jobService.changeJobStatus(jobId);
-        return "Job Status Changed";
-    }
-
-    @GetMapping("search/{keyword}")
-    public List<JobDTO> searchJob(@PathVariable("keyword") String keyword){
-        return jobService.getAllJobsByKeyword(keyword);
     }
 }

@@ -6,9 +6,16 @@ import java.util.List;
 
 public interface JobService {
     void saveJob(JobDTO jobDTO);
+
     void updateJob(JobDTO jobDTO);
-    void deleteJob(int id);
+
+    void deleteJob(String id);
+
     List<JobDTO> getAllJobs();
-    void changeJobStatus(String jobId);
+
+    void changeJobStatus(String id);
+
     List<JobDTO> getAllJobsByKeyword(String keyword);
+
+    JobDTO getJobById(String id);
 }

@@ -14,45 +14,64 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class JobServiceImpl implements JobService {
+
     private final JobRepository jobRepository;
     private final ModelMapper modelMapper;
 
+    @Override
     public void saveJob(JobDTO jobDTO) {
 //        Job job = new Job();
 //        job.setJobTitle(jobDTO.getJobTitle());
 //        job.setCompany(jobDTO.getCompany());
 //        job.setLocation(jobDTO.getLocation());
-//        job.setType(jobDTO.getType());
 //        job.setJobDescription(jobDTO.getJobDescription());
-//        jobRepository.save(job);
+//        job.setType(jobDTO.getType());                            boilerplate code
 
-        jobRepository.save(modelMapper.map(jobDTO, Job.class));
+//        modelMapper.map(jobDTO,Job.class); easy way
+
+
+
+        jobRepository.save(modelMapper.map(jobDTO,Job.class));
+
+//        dto type eka gaththa job type ekt demma
     }
-
 
     @Override
     public void updateJob(JobDTO jobDTO) {
-        jobRepository.save(modelMapper.map(jobDTO, Job.class));
+        jobRepository.save(modelMapper.map(jobDTO,Job.class));
+        // update ekatath save eka ganne mekedi wenne
+        // primary key eka ekiyanne id eka already thibboth save wenne na update wenne
     }
 
-    public void deleteJob(int id) {
-        jobRepository.deleteById(id);
+    @Override
+    public void deleteJob(String id) {
+        jobRepository.deleteById(Integer.parseInt(id));
     }
 
     @Override
     public List<JobDTO> getAllJobs() {
-        List<Job> allJobs=jobRepository.findAll();
+        List<Job> allJobs = jobRepository.findAll();
         return modelMapper.map(allJobs, new TypeToken<List<JobDTO>>(){}.getType());
+
     }
 
     @Override
-    public void changeJobStatus(String jobId) {
-        jobRepository.updateJobStatus(jobId);
+    public void changeJobStatus(String id) {
+        jobRepository.updateJobStatus(id);
     }
 
     @Override
     public List<JobDTO> getAllJobsByKeyword(String keyword) {
-        List<Job> alljobs=jobRepository.findJobByJobTitleContainingIgnoreCase(keyword);
+        List<Job> alljobs= jobRepository.findJobByJobTitleContainingIgnoreCase(keyword);
         return modelMapper.map(alljobs, new TypeToken<List<JobDTO>>(){}.getType());
     }
+
+    @Override
+    public JobDTO getJobById(String id) {
+        Job job = jobRepository.getJobById(Integer.parseInt(id));
+        return modelMapper.map(job,JobDTO.class);
+    }
+
+
 }
+

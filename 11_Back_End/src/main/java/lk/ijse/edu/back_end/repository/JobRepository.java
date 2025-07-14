@@ -10,12 +10,14 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface JobRepository extends JpaRepository<Job, Integer> {
+public interface JobRepository extends JpaRepository<Job,Integer> {
 
-    @Transactional
+    @Transactional // update wenna na meka anthuwa update eka commit wennona
     @Modifying
-    @Query(value = "UPDATE Job SET status='Deactivated' WHERE id =?1",nativeQuery = true)
-    void updateJobStatus(String jobId);
+    @Query(value = "UPDATE Job SET status='Deactivated' WHERE id = ?1",nativeQuery = true)
+    void updateJobStatus(String id);
 
-    List<Job> findJobByJobTitleContainingIgnoreCase(String jobTitle);
+    List<Job> findJobByJobTitleContainingIgnoreCase(String keyword);
+
+    Job getJobById(int id);
 }
