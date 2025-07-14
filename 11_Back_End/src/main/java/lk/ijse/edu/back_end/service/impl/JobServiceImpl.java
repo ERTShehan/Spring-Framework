@@ -2,6 +2,7 @@ package lk.ijse.edu.back_end.service.impl;
 
 import lk.ijse.edu.back_end.dto.JobDTO;
 import lk.ijse.edu.back_end.entity.Job;
+import lk.ijse.edu.back_end.exceptions.ResourceNotFound;
 import lk.ijse.edu.back_end.repository.JobRepository;
 import lk.ijse.edu.back_end.service.JobService;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +31,9 @@ public class JobServiceImpl implements JobService {
 //        modelMapper.map(jobDTO,Job.class); easy way
 
 
+        if(jobDTO.getId()==null){
+            throw new ResourceNotFound("Job Id is null");
+        }
 
         jobRepository.save(modelMapper.map(jobDTO,Job.class));
 
