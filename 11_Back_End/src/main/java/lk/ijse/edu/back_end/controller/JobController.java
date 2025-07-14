@@ -4,6 +4,7 @@ import lk.ijse.edu.back_end.dto.JobDTO;
 import lk.ijse.edu.back_end.service.impl.JobServiceImpl;
 import lk.ijse.edu.back_end.util.APIResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,9 +18,12 @@ public class JobController {
     private final JobServiceImpl jobService;
 
     @PostMapping("/create")
-    public String createJob(@RequestBody JobDTO jobDTO) {
+    public ResponseEntity<APIResponse<String>> createJob(@RequestBody JobDTO jobDTO) {
         jobService.saveJob(jobDTO);
-        return "Job Added";
+        return new ResponseEntity(new APIResponse<>(
+                        201,
+                        "Job Created Successfully",
+                        null), HttpStatus.CREATED);
     }
 
     @GetMapping("/getjob/{id}")
@@ -28,27 +32,39 @@ public class JobController {
     }
 
     @PutMapping("update")
-    public String updateJob(@RequestBody JobDTO jobDTO) {
+    public ResponseEntity<APIResponse<String>> updateJob(@RequestBody JobDTO jobDTO) {
         jobService.updateJob(jobDTO);
-        return "Job Updated";
-
+        return ResponseEntity.ok(new APIResponse<>(200, "Job Updated Successfully",null));
     }
 
     @PatchMapping("/changeStatus/{id}")
-    public String changeJobStatus(@PathVariable("id") String id) {
+    public ResponseEntity<APIResponse<String>> changeJobStatus(@PathVariable("id") String id) {
         jobService.changeJobStatus(id);
-        return "Job Status Changed";
+        return ResponseEntity.ok(
+                new APIResponse<>(
+                        200,
+                        "Job Status Changed Successfully",
+                        null));
     }
 
     @GetMapping("search/{keyword}")
-    public List<JobDTO> searchJob(@PathVariable("keyword") String keyword) {
-        return jobService.getAllJobsByKeyword(keyword);
+    public ResponseEntity<APIResponse<List<JobDTO>>>searchJob(@PathVariable("keyword") String keyword) {
+        List<JobDTO> jobDTOS = jobService.getAllJobsByKeyword(keyword);
+        return ResponseEntity.ok(new APIResponse<>(
+                200,
+                "",
+                jobDTOS
+        ));
     }
 
     @PutMapping(value = "delete" , params = "id")
-    public String deleteJob(@RequestParam("id") String id) {
+    public ResponseEntity<APIResponse<String>> deleteJob(@RequestParam("id") String id) {
         jobService.deleteJob(id);
-        return "Job Deleted";
+        return ResponseEntity.ok(
+                new APIResponse<>(
+                        200,
+                        "Job Deleted Successfully",
+                        null));
     }
 
     @GetMapping("getalljobs")
@@ -56,7 +72,7 @@ public class JobController {
         List<JobDTO> jobDTOS =  jobService.getAllJobs();
         return ResponseEntity.ok(new APIResponse<>(
            200,
-           "",
+           "Job List Fetch Successfully",
            jobDTOS
         ));
     }
