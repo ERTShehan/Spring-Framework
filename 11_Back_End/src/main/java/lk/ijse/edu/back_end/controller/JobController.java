@@ -1,9 +1,13 @@
 package lk.ijse.edu.back_end.controller;
 
+import jakarta.validation.Valid;
 import lk.ijse.edu.back_end.dto.JobDTO;
 import lk.ijse.edu.back_end.service.impl.JobServiceImpl;
 import lk.ijse.edu.back_end.util.APIResponse;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +18,25 @@ import java.util.List;
 @RequestMapping("api/v1/job")
 @RequiredArgsConstructor
 @CrossOrigin
+@Slf4j
 public class JobController {
     private final JobServiceImpl jobService;
+//    private static final Logger logger = LoggerFactory.getLogger(JobController.class);
 
     @PostMapping("/create")
     public ResponseEntity<APIResponse<String>> createJob(@RequestBody JobDTO jobDTO) {
+//        logger.info("Job Created Successfully");
+//        logger.debug("Job Details: {}", jobDTO);
+//        logger.error("Job Creation Failed");
+//        logger.trace("Job Creation Trace Log");
+//        logger.warn("Job Creation Warning");
+
+        log.info("Job Created Successfully");
+        log.debug("Job Details: {}", jobDTO);
+        log.error("Job Creation Failed");
+        log.trace("Job Creation Trace Log");
+        log.warn("Job Creation Warning");
+
         jobService.saveJob(jobDTO);
         return new ResponseEntity(new APIResponse<>(
                         201,
@@ -32,7 +50,7 @@ public class JobController {
     }
 
     @PutMapping("update")
-    public ResponseEntity<APIResponse<String>> updateJob(@RequestBody JobDTO jobDTO) {
+    public ResponseEntity<APIResponse<String>> updateJob(@RequestBody @Valid JobDTO jobDTO) {
         jobService.updateJob(jobDTO);
         return ResponseEntity.ok(new APIResponse<>(200, "Job Updated Successfully",null));
     }

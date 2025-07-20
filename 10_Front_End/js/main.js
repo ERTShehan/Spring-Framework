@@ -66,7 +66,7 @@ function saveJob(){
 
         },
         error: function(xhr, status, error) {
-            console.log("Error saving job:", error);
+            console.log(error);
         }
     });
 
@@ -80,51 +80,35 @@ function resetFields(){
     $("#jobDescription").val("")
 }
 
-function loadAllJobs(){
+let allJobs = [];
+let currentPage = 1;
+const pageSize = 5;
+
+
+function loadAllJobs() {
     $.ajax({
         url: "http://localhost:8080/api/v1/job/getalljobs",
         type: "GET",
         success: function(jobs) {
-            console.log("Test")
-            console.log(jobs);
-            $("#jobsTableBody").empty();
-            jobs.forEach(job => {
-                $("#jobsTableBody").append(`
-            <tr>
-                <td>${job.id}</td>
-                <td>${job.jobTitle}</td>
-                <td>${job.company}</td>
-                <td>${job.location}</td>
-                <td>${job.type}</td>
-                <td>${job.jobDescription}</td>
-                <td>${job.status}</td>
-                <td><button onclick="deleteJob(${job.id})" class="btn btn-danger">Delete</button>
-                    <button onclick="loadJobForEdit(${job.id})" class="btn btn-warning btnEdit"  data-bs-toggle="modal" data-bs-target="#editJobModal">Edit</button>
-                    <button onclick="deactivateJob(${job.id})" class="btn btn-success">Deactive</button>
-                
-                </td>
-            </tr>
-        `);
-            });
+            allJobs = jobs.data;
+            currentPage = 1;
+            renderPaginatedJobs();
+            renderPaginationButtons();
         },
-
         error: function(xhr, status, error) {
             console.log("Error loading jobs:", error);
         }
-
-
     });
 }
 
 function loadSearchJobs(seachInput){
-    console.log("called")
     $.ajax({
         url: `http://localhost:8080/api/v1/job/search/${seachInput}`,
         type: "GET",
         success: function(jobs) {
             $("#jobsTableBody").empty();
             console.log(jobs)
-            jobs.forEach(job => {
+            jobs.data.forEach(job => {
                 $("#jobsTableBody").append(`
             <tr>
                 <td>${job.id}</td>
@@ -153,11 +137,15 @@ function loadSearchJobs(seachInput){
 }
 
 function deleteJob(id){
+    const answer = confirm("Are you sure you want to delete this job?");
+    if (!answer) {
+        return;
+    }
     $.ajax({
         url: `http://localhost:8080/api/v1/job/delete?id=${id}`,
         type: "PUT",
         success: function(response) {
-            console.log("Job deleted successfully:", response);
+            alert(response.message);
             loadAllJobs();
         },
         error: function(xhr, status, error) {
@@ -173,12 +161,13 @@ function loadJobForEdit(id){
         type : "GET",
         success : function(job){
             console.log(job)
-            $("#editJobId").val(job.id);
-            $("#editJobTitle").val(job.jobTitle);
-            $("#editCompanyName").val(job.company);
-            $("#editJobLocation").val(job.location);
-            $("#editJobType").val(job.type);
-            $("#editJobDescription").val(job.jobDescription);
+            $("#editJobId").val(job.data.id);
+            $("#editJobTitle").val(job.data.jobTitle);
+            $("#editCompanyName").val(job.data.company);
+            $("#editJobLocation").val(job.data.location);
+            $("#editJobType").val(job.data.type);
+            $("#editJobDescription").val(job.data.jobDescription);
+
 
         },
         error : function(xhr, status, error){
@@ -207,6 +196,7 @@ function updateJob(){
         "location": location,
         "type": jobType,
         "jobDescription": description,
+        "status": "Active"
     }
 
 
@@ -216,7 +206,7 @@ function updateJob(){
         contentType : "application/json",
         data : JSON.stringify(job),
         success : function(job){
-            console.log(job)
+            alert(job.message);
             loadAllJobs();
         },
         error : function(xhr, status, error){
@@ -227,14 +217,58 @@ function updateJob(){
 
 function deactivateJob(id) {
     $.ajax({
-        url: `http://localhost:8080/api/v1/job/changeStatus/${id}`,
+        url: `http://localhost:8080/api/v1/job/changestatus/${id}`,
         type: "PATCH",
         success: function(response) {
-            console.log("Job deactivated successfully:", response);
+            alert(response.message);
             loadAllJobs();
         },
         error: function(xhr, status, error) {
             console.log("Error deactivating job:", error);
         }
     })
+}
+
+function renderPaginatedJobs() {
+    $("#jobsTableBody").empty();
+
+    const start = (currentPage - 1) * pageSize;
+    const end = start + pageSize;
+    const jobsToRender = allJobs.slice(start, end);
+
+    jobsToRender.forEach(job => {
+        $("#jobsTableBody").append(`
+            <tr>
+                <td>${job.id}</td>
+                <td>${job.jobTitle}</td>
+                <td>${job.company}</td>
+                <td>${job.location}</td>
+                <td>${job.type}</td>
+                <td>${job.jobDescription}</td>
+                <td>${job.status}</td>
+                <td>
+                    <button onclick="deleteJob(${job.id})" class="btn btn-danger">Delete</button>
+                    <button onclick="loadJobForEdit(${job.id})" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editJobModal">Edit</button>
+                    <button onclick="deactivateJob(${job.id})" class="btn btn-success">Deactivate</button>
+                </td>
+            </tr>
+        `);
+    });
+}
+
+function renderPaginationButtons() {
+    const totalPages = Math.ceil(allJobs.length / pageSize);
+    const paginationContainer = $("#pagination");
+    paginationContainer.empty();
+
+    for (let i = 1; i <= totalPages; i++) {
+        paginationContainer.append(`
+            <button class="btn btn-outline-primary m-1" onclick="goToPage(${i})">${i}</button>
+        `);
+    }
+}
+
+function goToPage(page) {
+    currentPage = page;
+    renderPaginatedJobs();
 }
