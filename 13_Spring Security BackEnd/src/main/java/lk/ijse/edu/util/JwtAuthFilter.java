@@ -17,7 +17,7 @@ import java.io.IOException;
 
 @Component
 @RequiredArgsConstructor
-public class JwtAuthFilter { // request eke header eke ena data tika filter karanna hadagannawa
+public class JwtAuthFilter extends OncePerRequestFilter{ // request eke header eke ena data tika filter karanna hadagannawa
 
     private final JwtUtil jwtUtil;
     private final UserDetailsService userDetailsService;
