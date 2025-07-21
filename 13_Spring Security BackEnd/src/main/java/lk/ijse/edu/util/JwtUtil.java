@@ -27,10 +27,25 @@ public class JwtUtil { // token generate karanna , expire time check , etc..
 
     public String extractUsername(String token) {
         return Jwts.parserBuilder()
-                .setSigningKey(secretKey.getBytes())
+                .setSigningKey(Keys.hmacShaKeyFor(secretKey.getBytes()))
                 .build()
                 .parseClaimsJws(token)
                 .getBody()
                 .getSubject();
+    }
+
+
+    // token validation method
+    public boolean validateToken(String token) {
+        try {
+            Jwts.parserBuilder()
+                    .setSigningKey(Keys.hmacShaKeyFor(secretKey.getBytes()))
+                    .build()
+                    .parseClaimsJws(token);
+            return true;
+
+        }catch (Exception e) {
+            return false;
+        }
     }
 }
