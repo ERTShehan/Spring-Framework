@@ -1,22 +1,22 @@
-2025-07-20T21:55:27.513+05:30  INFO 12756 --- [11_Back_End] [main] lk.ijse.edu.back_end.Application         : Starting Application using Java 21.0.5 with PID 12756 (D:\ijse\GDSE72\AAD\Spring\Spring Framework\11_Back_End\target\classes started by Shehan in D:\ijse\GDSE72\AAD\Spring\Spring Framework)
-2025-07-20T21:55:27.519+05:30 DEBUG 12756 --- [11_Back_End] [main] lk.ijse.edu.back_end.Application         : Running with Spring Boot v3.5.3, Spring v6.2.8
-2025-07-20T21:55:27.523+05:30  INFO 12756 --- [11_Back_End] [main] lk.ijse.edu.back_end.Application         : No active profile set, falling back to 1 default profile: "default"
-2025-07-20T21:55:29.126+05:30  INFO 12756 --- [11_Back_End] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-20T21:55:29.269+05:30  INFO 12756 --- [11_Back_End] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interface.
-2025-07-20T21:55:30.438+05:30  INFO 12756 --- [11_Back_End] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-07-20T21:55:30.472+05:30  INFO 12756 --- [11_Back_End] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-20T21:55:30.473+05:30  INFO 12756 --- [11_Back_End] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-20T21:55:30.582+05:30  INFO 12756 --- [11_Back_End] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-20T21:55:30.583+05:30  INFO 12756 --- [11_Back_End] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2892 ms
-2025-07-20T21:55:30.967+05:30  INFO 12756 --- [11_Back_End] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-20T21:55:31.062+05:30  INFO 12756 --- [11_Back_End] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-20T21:55:31.121+05:30  INFO 12756 --- [11_Back_End] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-20T21:55:31.659+05:30  INFO 12756 --- [11_Back_End] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-20T21:55:31.710+05:30  INFO 12756 --- [11_Back_End] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-20T21:55:32.324+05:30  INFO 12756 --- [11_Back_End] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ce2e079
-2025-07-20T21:55:32.328+05:30  INFO 12756 --- [11_Back_End] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-20T21:55:32.417+05:30  WARN 12756 --- [11_Back_End] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-07-20T21:55:32.454+05:30  INFO 12756 --- [11_Back_End] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-07-29T16:58:47.229+05:30  INFO 14316 --- [11_Back_End] [main] lk.ijse.edu.back_end.Application         : Starting Application using Java 21.0.5 with PID 14316 (D:\ijse\GDSE72\AAD\Spring\Spring Framework\11_Back_End\target\classes started by Shehan in D:\ijse\GDSE72\AAD\Spring\Spring Framework)
+2025-07-29T16:58:47.242+05:30 DEBUG 14316 --- [11_Back_End] [main] lk.ijse.edu.back_end.Application         : Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-29T16:58:47.244+05:30  INFO 14316 --- [11_Back_End] [main] lk.ijse.edu.back_end.Application         : No active profile set, falling back to 1 default profile: "default"
+2025-07-29T16:58:49.307+05:30  INFO 14316 --- [11_Back_End] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-29T16:58:49.411+05:30  INFO 14316 --- [11_Back_End] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interface.
+2025-07-29T16:58:50.351+05:30  INFO 14316 --- [11_Back_End] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-29T16:58:50.376+05:30  INFO 14316 --- [11_Back_End] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-29T16:58:50.377+05:30  INFO 14316 --- [11_Back_End] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-29T16:58:50.483+05:30  INFO 14316 --- [11_Back_End] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-29T16:58:50.491+05:30  INFO 14316 --- [11_Back_End] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3100 ms
+2025-07-29T16:58:50.885+05:30  INFO 14316 --- [11_Back_End] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-29T16:58:50.977+05:30  INFO 14316 --- [11_Back_End] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-29T16:58:51.079+05:30  INFO 14316 --- [11_Back_End] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-29T16:58:51.604+05:30  INFO 14316 --- [11_Back_End] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-29T16:58:51.660+05:30  INFO 14316 --- [11_Back_End] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-29T16:58:52.317+05:30  INFO 14316 --- [11_Back_End] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@698ac187
+2025-07-29T16:58:52.320+05:30  INFO 14316 --- [11_Back_End] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-29T16:58:52.422+05:30  WARN 14316 --- [11_Back_End] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-29T16:58:52.467+05:30  INFO 14316 --- [11_Back_End] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.40
@@ -24,32 +24,51 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-07-20T21:55:33.956+05:30  INFO 12756 --- [11_Back_End] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-20T21:55:34.072+05:30  INFO 12756 --- [11_Back_End] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-20T21:55:34.572+05:30  INFO 12756 --- [11_Back_End] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-07-20T21:55:34.692+05:30  WARN 12756 --- [11_Back_End] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-20T21:55:34.864+05:30 DEBUG 12756 --- [11_Back_End] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
-2025-07-20T21:55:35.015+05:30 DEBUG 12756 --- [11_Back_End] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2025-07-20T21:55:35.056+05:30 DEBUG 12756 --- [11_Back_End] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2025-07-20T21:55:35.140+05:30 DEBUG 12756 --- [11_Back_End] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2025-07-20T21:55:35.331+05:30  WARN 12756 --- [11_Back_End] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
-2025-07-20T21:55:35.335+05:30  INFO 12756 --- [11_Back_End] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-20T21:55:35.337+05:30  INFO 12756 --- [11_Back_End] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-20T21:55:35.369+05:30  INFO 12756 --- [11_Back_End] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-20T21:55:35.397+05:30  INFO 12756 --- [11_Back_End] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-07-20T21:55:35.430+05:30 ERROR 12756 --- [11_Back_End] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
+2025-07-29T16:58:54.083+05:30  INFO 14316 --- [11_Back_End] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-29T16:58:54.273+05:30  INFO 14316 --- [11_Back_End] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-29T16:58:54.904+05:30  INFO 14316 --- [11_Back_End] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-29T16:58:55.089+05:30  WARN 14316 --- [11_Back_End] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-29T16:58:55.279+05:30 DEBUG 14316 --- [11_Back_End] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2025-07-29T16:58:55.441+05:30 DEBUG 14316 --- [11_Back_End] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-29T16:58:55.489+05:30 DEBUG 14316 --- [11_Back_End] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-29T16:58:55.637+05:30 DEBUG 14316 --- [11_Back_End] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-29T16:58:56.095+05:30  INFO 14316 --- [11_Back_End] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-29T16:58:56.114+05:30  INFO 14316 --- [11_Back_End] [main] lk.ijse.edu.back_end.Application         : Started Application in 12.972 seconds (process running for 14.847)
+2025-07-29T16:59:29.679+05:30  INFO 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-29T16:59:29.680+05:30  INFO 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-29T16:59:29.681+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-07-29T16:59:29.681+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-07-29T16:59:29.683+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-07-29T16:59:29.691+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2cdd156b
+2025-07-29T16:59:29.692+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5ff8d76f
+2025-07-29T16:59:29.693+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-29T16:59:29.693+05:30  INFO 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2025-07-29T16:59:29.734+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/job/create", parameters={}
+2025-07-29T16:59:29.829+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.edu.back_end.controller.JobController#createJob(JobDTO)
+2025-07-29T16:59:30.642+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<lk.ijse.edu.back_end.util.APIResponse<java.lang.String>> lk.ijse.edu.back_end.controller.JobController.createJob(lk.ijse.edu.back_end.dto.JobDTO): JSON parse error: Cannot deserialize value of type `lk.ijse.edu.back_end.dto.JobDTO` from Array value (token `JsonToken.START_ARRAY`)
+2025-07-29T16:59:30.705+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.edu.back_end.exceptions.GlobalExceptionHandler#handleGenericException(Exception)
+2025-07-29T16:59:30.797+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-29T16:59:30.804+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(status=500, message=Internal Server Error Occurred, data=null)]
+2025-07-29T16:59:30.862+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `lk.ijse.edu.back_end.dto.JobDTO` from Array value (token `JsonToken.START_ARRAY`)]
+2025-07-29T16:59:30.864+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-07-29T17:00:34.965+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/job/create", parameters={}
+2025-07-29T17:00:34.967+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.edu.back_end.controller.JobController#createJob(JobDTO)
+2025-07-29T17:00:34.970+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<lk.ijse.edu.back_end.util.APIResponse<java.lang.String>> lk.ijse.edu.back_end.controller.JobController.createJob(lk.ijse.edu.back_end.dto.JobDTO): JSON parse error: Cannot deserialize value of type `lk.ijse.edu.back_end.dto.JobDTO` from Array value (token `JsonToken.START_ARRAY`)
+2025-07-29T17:00:34.972+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.edu.back_end.exceptions.GlobalExceptionHandler#handleGenericException(Exception)
+2025-07-29T17:00:34.973+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-29T17:00:34.973+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(status=500, message=Internal Server Error Occurred, data=null)]
+2025-07-29T17:00:34.975+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `lk.ijse.edu.back_end.dto.JobDTO` from Array value (token `JsonToken.START_ARRAY`)]
+2025-07-29T17:00:34.975+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-07-29T17:01:30.837+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/v1/job/create", parameters={}
+2025-07-29T17:01:30.882+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to lk.ijse.edu.back_end.controller.JobController#createJob(JobDTO)
+2025-07-29T17:01:30.887+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<lk.ijse.edu.back_end.util.APIResponse<java.lang.String>> lk.ijse.edu.back_end.controller.JobController.createJob(lk.ijse.edu.back_end.dto.JobDTO): JSON parse error: Cannot deserialize value of type `lk.ijse.edu.back_end.dto.JobDTO` from Array value (token `JsonToken.START_ARRAY`)
+2025-07-29T17:01:30.889+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler lk.ijse.edu.back_end.exceptions.GlobalExceptionHandler#handleGenericException(Exception)
+2025-07-29T17:01:30.889+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-29T17:01:30.890+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [APIResponse(status=500, message=Internal Server Error Occurred, data=null)]
+2025-07-29T17:01:30.894+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `lk.ijse.edu.back_end.dto.JobDTO` from Array value (token `JsonToken.START_ARRAY`)]
+2025-07-29T17:01:30.895+05:30 DEBUG 14316 --- [11_Back_End] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 500 INTERNAL_SERVER_ERROR
+2025-07-29T17:02:28.230+05:30  INFO 14316 --- [11_Back_End] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-29T17:02:28.238+05:30  INFO 14316 --- [11_Back_End] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-29T17:02:28.244+05:30  INFO 14316 --- [11_Back_End] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-29T17:02:28.247+05:30  INFO 14316 --- [11_Back_End] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-29T17:02:28.259+05:30  INFO 14316 --- [11_Back_End] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
