@@ -34,7 +34,7 @@ public class AuthService {
             throw new BadCredentialsException("Incorrect password");
         }
         String token=jwtUtil.generateToken(authDTO.getUsername());
-        return  new AuthResponseDTO(token);
+        return  new AuthResponseDTO(token, user.getRole().name());
     }
     public String register(RegisterDTO registerDTO) {
         if(userRepository.findByUsername(

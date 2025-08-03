@@ -32,4 +32,13 @@ public class AuthController {
                 "OK",
                 authService.authenticate(authDTO)));
     }
+
+    @GetMapping("/profile")
+    public ResponseEntity<ApiResponse> getProfile() {
+        return ResponseEntity.ok(new ApiResponse(
+                200,
+                "OK",
+                "This is a protected endpoint!"
+        ));
+    }
 }
